@@ -1,5 +1,5 @@
 // Ugly global variable holding the current card deck
-var card_data = [];
+var card_data;
 var card_options = card_default_options();
 
 function mergeSort(arr, compare) {
@@ -471,7 +471,9 @@ function local_store_load() {
 }
 
 $(document).ready(function () {
-    local_store_load();
+	if (!card_data) {
+		//local_store_load();
+	}
     ui_setup_color_selector();
     $('.icon-list').typeahead({
         source: icon_names,
