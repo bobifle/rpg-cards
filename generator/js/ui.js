@@ -407,6 +407,13 @@ function ui_sort_execute() {
     ui_update_card_list();
 }
 
+function ui_lucy() {
+    card_data = card_data.filter(function (card) {
+		return card.tags.indexOf("lucy") >=0;
+	});
+    ui_update_card_list();
+}
+
 function ui_filter() {
     $("#filter-modal").modal('show');
 }
@@ -498,6 +505,7 @@ $(document).ready(function () {
     });
 
     $("#button-generate").click(ui_generate);
+    $("#button-lucy").click(ui_lucy);
     $("#button-load").click(function () { $("#file-load").click(); });
     $("#file-load").change(ui_load_files);
     $("#button-clear").click(ui_clear_all);

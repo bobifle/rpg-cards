@@ -87,6 +87,99 @@ var card_data = [
         ],
         "tags": ["item", "weapon", "lucy"]
     },
+	{
+        "count": 1,
+        "color": "dimgray",
+        "title": "Thieves' Tools",
+        "icon": "pincers",
+        "contents": [
+            "subtitle | Thieves kit (25 gp 1 lb)",
+            "rule",
+            "fill | 1",
+			"text | This set of tools includes a <b>small file</b>, a set of <b>lock picks</b>, a <b>small mirror</b> mounted on a metal handle, a set of narrow-bladed <b>scissors</b>, and a <b>pair of pliers</b>.",
+			"text | Proficiency with these tools lets you add your proficiency bonus to any ability checks you make to disarm traps or open locks.",
+            "fill | 1",
+        ],
+        "tags": ["item", "kit", "lucy"]
+    },
+	{
+        "count": 1,
+        "color": "dimgray",
+        "title": "Poisoner's Kit",
+        "icon": "poison-bottle",
+        "contents": [
+            "subtitle | Poison kit (25 gp 2 lb)",
+            "rule",
+            "fill | 1",
+			"text | A poisoner’s kit includes the vials, chemicals, and other equipment necessary for the <b>creation of poisons</b>.",
+			"text | Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to <b>craft</b> or <b>use</b> poisons.",
+            "fill | 1",
+        ],
+        "tags": ["item", "kit", "lucy"]
+    },
+	{
+        "count": 1,
+        "color": "dimgray",
+        "title": "Disguise Kit",
+        "icon": "poison-bottle",
+        "contents": [
+            "subtitle | Disguise kit (25 gp 3 lb)",
+            "rule",
+            "fill | 1",
+			"text | This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance.",
+			"text | Proficiency with this kit lets you add your proficiency bonus to create a visual disguise.",
+            "fill | 1",
+        ],
+        "tags": ["item", "kit", "lucy"]
+    },
+	{
+        "count": 1,
+        "color": "dimgray",
+        "title": "Mess Kit",
+        "icon": "cauldron",
+        "contents": [
+            "subtitle | Mess kit(1sp 1lb)",
+            "rule",
+			"text | This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl.",
+            "fill | 1",
+        ],
+        "tags": ["item", "kit", "lucy"]
+    },
+	{
+        "count": 1,
+        "color": "dimgray",
+        "title": "Waterskin",
+        "icon": "magic-potion",
+        "contents": [
+            "subtitle | Waterskin (2sp 5lb(full))",
+            "rule",
+			"text | 4 pints of water (or maybe something stronger)",
+            "fill | 1",
+        ],
+        "tags": ["item", "kit", "lucy"]
+    },
+	{
+        "count": 1,
+        "color": "green",
+        "title": "Devil Weed",
+        "icon": "wheat",
+        "contents": [
+            "subtitle | 5 doses of Devil Weed",
+            "rule",
+			"text | For each dose above 1 per hour",
+			"property | charisma | +2 (not stackable)",
+			"property | Wisdom and Intelligence | -2 ",
+            "rule",
+			"text | An addictive drug fairly popular.",
+			"text | The weed is chewed, exhausted weed and saliva is spit out.",
+			"text | One dose gives <b>minor hallucinations</b> and <b>euphoria</b>.",
+			"section | Addiction",
+			"text | The user experiences withdrawal after 48 hours and is sickened for 1d6 hours.", 
+			"section | Doses",
+			"boxes | 5 | 2.5"
+        ],
+        "tags": ["item", "lucy"]
+    },
     {
         "count": 2,
         "color": "dimgray",
