@@ -182,9 +182,8 @@ var card_data = [
 	"title": "Devil Weed",
 	"icon": "olive",
 	"contents": [
-		"subtitle | 14 doses of Devil Weed",
+		"subtitle | 14 doses of Devil Weed (5 sp 500g)",
 		"rule",
-		"text | An addictive drug fairly popular.",
 		"text | The weed is chewed, exhausted weed and saliva is spit out.",
 		"text | One dose gives <b>minor hallucinations</b> and <b>euphoria</b>.",
 		"text | Further does give Cha +2 (cannot stack), Int -2 Wis -2.",

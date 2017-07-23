@@ -414,6 +414,11 @@ function ui_lucy() {
     ui_update_card_list();
 }
 
+function ui_cleric() {
+    card_data = card_cleric,
+    ui_update_card_list();
+}
+
 function ui_filter() {
     $("#filter-modal").modal('show');
 }
@@ -506,6 +511,7 @@ $(document).ready(function () {
 
     $("#button-generate").click(ui_generate);
     $("#button-lucy").click(ui_lucy);
+    $("#button-cleric").click(ui_cleric);
     $("#button-load").click(function () { $("#file-load").click(); });
     $("#file-load").change(ui_load_files);
     $("#button-clear").click(ui_clear_all);
