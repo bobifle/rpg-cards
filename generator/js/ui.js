@@ -419,6 +419,18 @@ function ui_cleric() {
     ui_update_card_list();
 }
 
+function ui_rad() {
+	card_data = card_spells.filter(function (card) {
+		return card.tags.indexOf("rad") >=0;
+	});
+	card_data = card_data.sort(function (card_a, card_b) {
+		 if (card_a.level > card_b.level) {return 1;};
+		 if (card_a.level < card_b.level) {return -1;};
+		 return 0;
+    });
+    ui_update_card_list();
+}
+
 function ui_filter() {
     $("#filter-modal").modal('show');
 }
@@ -512,6 +524,7 @@ $(document).ready(function () {
     $("#button-generate").click(ui_generate);
     $("#button-lucy").click(ui_lucy);
     $("#button-cleric").click(ui_cleric);
+    $("#button-rad").click(ui_rad);
     $("#button-load").click(function () { $("#file-load").click(); });
     $("#file-load").change(ui_load_files);
     $("#button-clear").click(ui_clear_all);
