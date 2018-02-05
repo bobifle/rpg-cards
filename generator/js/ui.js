@@ -419,6 +419,11 @@ function ui_cleric() {
     ui_update_card_list();
 }
 
+function ui_spells() {
+    card_data = card_spells,
+    ui_update_card_list();
+}
+
 function ui_rad() {
 	card_data = card_spells.filter(function (card) {
 		return card.tags.indexOf("rad") >=0;
@@ -524,6 +529,7 @@ $(document).ready(function () {
     $("#button-generate").click(ui_generate);
     $("#button-lucy").click(ui_lucy);
     $("#button-cleric").click(ui_cleric);
+    $("#button-spells").click(ui_spells);
     $("#button-rad").click(ui_rad);
     $("#button-load").click(function () { $("#file-load").click(); });
     $("#file-load").change(ui_load_files);

@@ -1,4 +1,5 @@
-var card_spells = [
+var card_spells = 
+[
 	{
 	"count": 1,
 	"color": "black",

@@ -15,7 +15,7 @@ log = logging.getLogger()
 ubase = 'http://dnd5eapi.co/api/'
 args = None
 
-sTemplate = '''var card_spells = [
+jsonTemplate = '''[
 {%- for spell in spells %}
 	{
 	"count": 1,
@@ -41,6 +41,9 @@ sTemplate = '''var card_spells = [
 {%- endfor %}
 ]
 '''
+
+# the  js version for the card generator
+sTemplate = 'var card_spells = \n' + jsonTemplate
 
 moreSpells = [
 {
@@ -205,10 +208,15 @@ def main():
 	for spell in itertools.islice(spells, args.max_spell):
 		log.info(spell)
 		sSpells.append(spell)
-	
+
+	# generate the json file
+	with open('card_spells.json', "w") as jsfile:
+		jsfile.write(jinja2.Template(jsonTemplate).render(spells=sSpells).encode('utf-8'))
+
+	# and the javascript
 	with open('card_spells.js', "w") as jsfile:
 		jsfile.write(jinja2.Template(sTemplate).render(spells=sSpells).encode('utf-8'))
-	
+
 	# serialize the data if not already done
 	if not os.path.exists(pfile):
 		with open(pfile, 'w') as fpickle:
